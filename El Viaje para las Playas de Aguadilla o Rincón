@@ -1,0 +1,472 @@
+
+#include<cstdlib>
+#include<ctime>
+#include<iostream>
+
+using namespace std;
+
+int main(){
+srand((unsigned)time(0));
+string nombre, apellido;
+string pueblo, playa;
+double milesperhourforarrival; 
+double millas_por_horas;
+double time; 
+int accurate_time;
+string ans, diaS;
+string na;
+int i, suma, valor; 
+int np;
+i = 1;
+suma = 0; 
+string oferta;
+double ivu = .2;
+
+
+
+cout<<"Hola! Porfavor entre su nombre y apellido: ";cin>>nombre>>apellido; 
+cout<<"Hola, "<<nombre<<" "<<apellido<<"! ¿Vas para Aguadilla o Rincón?: ";cin>>pueblo;
+
+if ( pueblo == "Aguadilla")
+{
+  cout<<"*******************************************************************************************"<<endl;
+  cout<<"Las playas mas famosas que Aguadilla tiene son: "<<endl;
+ cout<<"CrashBoat"<<endl; 
+ cout<<"Borinquen"<<endl;
+ cout<<"PeñaBlanca"<<endl;
+ cout<<"SurvivalBeach"<<endl; 
+ cout<<"RompeOlas"<<endl; 
+ cout<<"SurfersBeach"<<endl;
+
+cout<<"Si quieres surfear te recomiendo que vayas para la playa Surfers Beach."<<endl;
+cout<<"*******************************************************************************************"<<endl;
+
+cout<<"A que playa le gustaria ir?: ";cin>>playa; 
+
+ if ( (playa == "CrashBoat") || (playa == "Borinquen") || (playa == "PeñaBlanca") || (playa == "SurvivalBeach") || (playa == "RompeOlas") || (playa == "SurfersBeach") )
+{
+cout<<"Para su beneficio, ¿cuantas millas faltan para llegar a su destino?: ";cin>>milesperhourforarrival; 
+ 
+ cout<<"¿A cuantas millas por hora va usted?: ";cin>>millas_por_horas; 
+}
+ 
+//Calculaciones
+
+time = milesperhourforarrival / millas_por_horas;
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
+
+if ( time < 1 && time > 0) {
+
+   accurate_time = time * 60; 
+  cout<<"En "<<accurate_time<<" minutos mas o menos vas a llegar a su destino."<<endl;
+}
+ 
+if ( time > 1){
+    cout<<"En "<<time<<" horas mas o menos vas a llegar a su destino."<<endl;
+}
+
+if ( time == 1) {
+ cout<<"En "<<time<<" hora mas o menos vas a llegar a su destino."<<endl;
+ }
+ 
+ cout<<"*******************************************************************************************"<<endl;
+ cout<<"¿Le gustaria saber lugares para comer cerca de la playa?"<<endl;
+ cout<<"Entre si y no: ";cin>>ans;
+
+if ( ans == "si") {
+
+ cout<<"Estos son los lugares mas recomendados para comer: "<<endl;
+ cout<<"Desecheo"<<endl;
+ cout<<"Taquisimo"<<endl;
+ cout<<"TheReef"<<endl;
+ cout<<"CuatroLunas"<<endl; 
+}
+
+else 
+{
+    cout<<"¡No hay problema!"<<endl;
+}
+
+}
+
+if ( pueblo == "Rincon" || pueblo == "Rincón")
+{
+  cout<<"*******************************************************************************************"<<endl;
+  cout<<"Estas son las playas mas famosas que Rincon tiene: "<<endl;
+ cout<<"SandyBeach"<<endl;
+ cout<<"DomesBeach"<<endl;
+ cout<<"MariasBeach"<<endl;
+ cout<<"PlayaDoñaLala"<<endl;
+ 
+ cout<<"A que playa quieres ir?: ";cin>>playa;
+
+ if ( (playa == "SandyBeach") || (playa == "DomesBeach") || (playa == "MariasBeach") || (playa == "PlayaDoñaLala") )
+
+ {
+cout<<"Para su beneficio, ¿cuantas millas faltan para llegar a su destino?: ";cin>>milesperhourforarrival; 
+ 
+ cout<<"¿A cuantas millas por hora va usted?: ";cin>>millas_por_horas; 
+}
+ 
+//Calculaciones
+
+time = milesperhourforarrival / millas_por_horas;
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
+
+if ( time < 1 && time > 0) {
+
+   accurate_time = time * 60; 
+  cout<<"En "<<accurate_time<<" minutos mas o menos vas a llegar a su destino."<<endl;
+}
+ 
+if ( time > 1){
+    cout<<"En "<<time<<" horas mas o menos vas a llegar a su destino."<<endl;
+}
+
+if ( time == 1) {
+ cout<<"En "<<time<<" hora mas o menos vas a llegar a su destino."<<endl;
+ }
+
+cout<<"*******************************************************************************************"<<endl;
+ cout<<"¿Le gustaria saber lugares para comer cerca de la playa?"<<endl;
+ cout<<"Entre si y no: ";cin>>ans;
+
+if ( ans == "si") {
+    
+cout<<"Estos son los lugares mas recomendados para comer: "<<endl;
+cout<<"RootsRestaurant"<<endl;
+cout<<"NachoLibre"<<endl;
+cout<<"LaCambija"<<endl;
+cout<<"Tamboo"<<endl; 
+
+}
+
+
+else 
+ {
+     cout<<"¡No hay problema!"<<endl; 
+ }
+
+}
+cout<<"¿Con cuantas personas vas?: ";cin>>np;
+cout<<"Incluya los nombres de las personas: "<<endl;
+cout<<"*******************************************************************************************"<<endl;
+while ( (i <= np) )
+{
+    cout<<"Persona "<<"#"<<i<<" :";cin>>na;
+    i++; 
+ 
+}
+
+cout<<"En total hay: "<<i-1<<" personas."<<endl
+cout<<"*******************************************************************************************"<<endl;
+
+cout<<"Resumen de su viaje a "<<pueblo<<" para la playa "<<playa<<": "<<endl;
+cout<<"Van "<<np<<" personas en total"<<endl;
+
+
+if ( time > 1){
+    cout<<"En "<<time<<" horas mas o menos vas a llegar a "<<playa<<endl;
+}
+
+if ( time < 1 && time > 0) {
+
+   accurate_time = time * 60; 
+  cout<<"En "<<accurate_time<<" minutos mas o menos vas a llegar a su destino."<<endl;
+}
+ 
+if ( time == 1) {
+ cout<<"En "<<time<<" hora mas o menos vas a llegar a su destino."<<endl;
+ }
+
+
+if ( (np >= 5) && (playa == "CrashBoat") || (playa == "Borinquen") || (playa == "PeñaBlanca") || (playa == "SurvivalBeach") || (playa == "RompeOlas") || (playa == "SurfersBeach") )
+{
+    cout<<"Para su conveniencia, aqui le dejo un lugar para comer para"<<endl;
+    cout<<"grupos grandes y mas economico:"<<endl;
+    cout<<"*******************************************************************************************"<<endl; 
+    cout<<"LosGapos"<<endl<<endl;
+  
+
+//Calculos de las comidas
+ double ofert1 = 34.99;
+ double ofert2 = 25.99;
+ double ofert3 = 15.99;
+ double calculo_surtido;
+ double calculo_surtido_descuento;
+ double calculo_surtido_descuento2;
+cout<<"LosGapos tiene las siguientes ofertas de surtidos: "<<endl;
+cout<<"Oferta #1: Surtido XL $"<<ofert1<<endl;
+cout<<"Oferta #2: Surtido Grande $"<<ofert2<<endl; 
+cout<<"Oferta #3: Surtido Pequeña $"<<ofert3<<endl;
+cout<<"¿Le gustaria ordenar surtido de camino para que este listo para recoger?: ";cin>>ans;
+ if (ans == "si")
+ {
+     cout<<"¿Que oferta le gustaria comprar?"<<endl;
+     cout<<"Entre 'Oferta1', 'Oferta2' o 'Oferta3' : ";cin>>oferta;
+ }
+ else {
+     cout<<"¡No hay problema!"<<endl;
+     cout<<"¡Ya todo esta listo para su viaje a Aguadilla para "<<playa<<"!"<<endl;
+     cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+ }
+
+if (oferta == "Oferta1"){
+    calculo_surtido = (ofert1 * .2) + ofert1;
+    cout<<"Este es su total con ivu incluido: $"<<calculo_surtido<<endl; 
+    cout<<"¡LosGapos tienen un descuento de 25% los lunes y un 40% de descuento los viernes!"<<endl;
+    cout<<"¿Que dia es hoy?: ";cin>>diaS;
+
+    if ( (diaS == "Domingo" || diaS == "domingo") || (diaS == "Martes" || diaS == "martes") || diaS == "Sabado" || diaS == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_surtido<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+    if ( diaS == "Lunes" || diaS == "lunes"){
+        calculo_surtido_descuento = calculo_surtido - (calculo_surtido * .25);
+        cout<<"Su total con el 25% de descuento es: $"<<calculo_surtido_descuento<<endl; 
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl; 
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+    if ( diaS == "Viernes" || diaS == "viernes"){
+        calculo_surtido_descuento2 = calculo_surtido - (calculo_surtido * .40);
+        cout<<"Su total con el descuento de 40% es: $"<<calculo_surtido_descuento2<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl; 
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+}
+ 
+if (oferta == "Oferta2"){
+    calculo_surtido = (ofert2 * .2) + ofert2;
+    cout<<"Este es su total con ivu incluido: $"<<calculo_surtido<<endl;
+    cout<<"¡LosGapos tienen un descuento de 25% los lunes y un 40% de descuento los viernes!"<<endl;
+    cout<<"¿Que dia es hoy?: ";cin>>diaS;
+
+    if ( (diaS == "Domingo" || diaS == "domingo") || (diaS == "Martes" || diaS == "martes") || diaS == "Sabado" || diaS == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_surtido<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+
+    if ( diaS == "Lunes" || diaS == "lunes"){
+        calculo_surtido_descuento = calculo_surtido - (calculo_surtido * .25);
+        cout<<"Su total con el 25% de descuento es: $"<<calculo_surtido_descuento<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl; 
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+  
+    
+    if ( diaS == "Viernes" || diaS == "viernes"){
+        calculo_surtido_descuento2 = calculo_surtido - (calculo_surtido * .40);
+        cout<<"Su total con el descuento de 40% es: $"<<calculo_surtido_descuento2<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl; 
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+    
+}
+
+if (oferta == "Oferta3"){
+    calculo_surtido = (ofert3 * .2) + ofert3;
+    cout<<"Este es su total con ivu incluido: $"<<calculo_surtido<<endl;
+    cout<<"¡LosGapos tienen un descuento de 25% los lunes y un 40% de descuento los viernes!"<<endl;
+    cout<<"¿Que dia es hoy?: ";cin>>diaS;
+
+    if ( (diaS == "Domingo" || diaS == "domingo") || (diaS == "Martes" || diaS == "martes") || diaS == "Sabado" || diaS == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_surtido<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+    if (diaS == "Lunes" || diaS == "lunes"){
+        calculo_surtido_descuento = calculo_surtido - (calculo_surtido * .25);
+        cout<<"Su total con el 25% de descuento es: $"<<calculo_surtido_descuento<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl; 
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+    if (diaS == "Viernes" || diaS == "viernes"){
+        calculo_surtido_descuento2 = calculo_surtido - (calculo_surtido * .40);
+        cout<<"Su total con el 40% de descuento es: $"<<calculo_surtido_descuento2<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Aguadilla para la playa "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl;
+    }
+
+
+}
+   
+
+}
+
+
+
+if ( (np >= 5) && (playa == "SandyBeach") || (playa == "DomesBeach") || (playa == "MariasBeach") || (playa == "PlayaDoñaLala") )
+{
+    cout<<"Para su convinencia, aqui le dejo un lugar de comer para"<<endl;
+  cout<<"grupos grandes y mas economico:"<<endl;
+ cout<<"*******************************************************************************************"<<endl;
+ cout<<"BrothersPizza"<<endl; 
+  
+
+//Calculos  de las comidas
+ double o1 = 22.99;
+ double o2 = 15.99;
+ double o3 = 12.99;
+ double calculo_comida;
+ double calculo_comida_descuento;
+ double calculo_comida_descuento2;
+ string dia;
+ string ans2;
+int cont2;
+int cont3; 
+ 
+cout<<"BrothersPizza tiene las siguientes ofertas de pizza con botellon:"<<endl;
+cout<<"Oferta #1: Pizza XL $"<<o1<<endl; 
+cout<<"Oferta #2: Pizza Grande $"<<o2<<endl;
+cout<<"Oferta #3: Pizza Mediana $"<<o3<<endl;
+cout<<"¿Le gustaria ordenar pizza de camino para que este lista para recoger?: ";cin>>ans2;
+ if ( ans2 == "si")
+{
+cout<<"¿Que oferta le gustaria comprar?"<<endl;
+cout<<"Entre 'Oferta1', 'Oferta2' o 'Oferta3': ";cin>>oferta;
+}
+ 
+ else {
+     cout<<"No hay problema!"<<endl;
+     cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+     cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl; 
+ }
+
+if ( oferta == "Oferta1"  ){
+
+calculo_comida = (o1 * .2) + o1;
+cout<<"Este es su total con el ivu incluido: $"<<calculo_comida<<endl;
+cout<<"¡BrothersPizza tiene un descuento de 30% los miercoles"<<endl;
+cout<<"y un 50% de descuento los jueves!"<<endl;
+cout<<"¿Que dia es hoy?: ";cin>>dia;
+
+if ( (dia == "Domingo" || dia == "domingo") || (dia == "Martes" || dia == "martes") || dia == "Sabado" || dia == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_comida<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirlo! Que tengas un excelente dia!"<<endl;
+    }
+
+if ( dia == "Miercoles" || dia == "miercoles"){
+    calculo_comida_descuento = calculo_comida - (calculo_comida * .3);
+    cout<<"Su total con el 30% de descuento es: $"<<calculo_comida_descuento<<endl; 
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl; 
+}
+
+
+if ( dia == "Jueves" || dia == "jueves"){
+    calculo_comida_descuento2 = calculo_comida - (calculo_comida * .5);
+    cout<<"Su total con el 50% de descuento es: $"<<calculo_comida_descuento2<<endl;
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme servirle! Que tengas un excelente dia!"<<endl; 
+}
+
+
+
+}
+ 
+if ( oferta == "Oferta2"){
+    calculo_comida = (o2 * .2) + o2;
+    cout<<"Este es su total con el ivu incluido: $"<<calculo_comida<<endl;
+    cout<<"¡BrothersPizza tiene un descuento de 30% los miercoles"<<endl; 
+    cout<<"y un descuento de 50% los jueves!"<<endl;
+    cout<<"¿Que dia es hoy?: ";cin>>dia;
+
+    if ( (dia == "Domingo" || dia == "domingo") || (dia == "Martes" || dia == "martes") || dia == "Sabado" || dia == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_comida<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirlo! Que tengas un excelente dia!"<<endl;
+    }
+
+  if (dia == "Miercoles" || dia == "miercoles"){
+      calculo_comida_descuento = calculo_comida - (calculo_comida * .3);
+    cout<<"Su total con el 30% de descuento es: $"<<calculo_comida_descuento<<endl; 
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme servirlo! Que tengas un excelente dia!"<<endl;
+  }
+
+  
+if ( dia == "Jueves" || dia == "jueves"){
+    calculo_comida_descuento2 = calculo_comida - (calculo_comida * .5);
+    cout<<"Su total con el 50% de descuento es: $"<<calculo_comida_descuento2<<endl;
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme ayudarlo! Que tengas un excelente dia!"<<endl;
+}
+
+}
+
+if ( oferta == "Oferta3"){
+    calculo_comida = (o3 * .2) + o3;
+    cout<<"Este es su total con el ivu incluido: $"<<calculo_comida<<endl;
+    cout<<"¡BrothersPizza tiene un descuento de 30% los miercoles"<<endl;
+    cout<<"y un descuento de 50% los jueves!"<<endl;
+    cout<<"¿Que dia es hoy?: ";cin>>dia;
+
+    if ( (dia == "Domingo" || dia == "domingo") || (dia == "Martes" || dia == "martes") || dia == "Sabado" || dia == "sabado" )
+    {
+        cout<<"Su total se queda en: $"<<calculo_comida<<endl;
+        cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+        cout<<"¡Gracias por dejarme servirlo! Que tengas un excelente dia!"<<endl;
+    }
+
+    if (dia == "Miercoles" || dia == "miercoles"){
+        calculo_comida_descuento = calculo_comida - (calculo_comida * .3);
+    cout<<"Su total con el 30% de descuento es: $"<<calculo_comida_descuento<<endl; 
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme servirlo! Que tengas un excelente dia!"<<endl;
+    }
+
+    if ( dia == "Jueves" || dia == "jueves"){
+        calculo_comida_descuento2 = calculo_comida - (calculo_comida * .5);
+    cout<<"Su total con el 50% de descuento es: $"<<calculo_comida_descuento2<<endl;
+    cout<<"¡Ya todo esta listo para su viaje a Rincon para "<<playa<<"!"<<endl;
+    cout<<"¡Gracias por dejarme ayudarlo! Que tengas un excelente dia!"<<endl;
+    }
+
+}
+
+}
+
+
+cout<<"*******************************************************************************************"<<endl;
+ cout<<endl; 
+ cout<<"¡Para su proximo viaje nosotros vamos a escoger un pueblo por ti!"<<endl;
+
+  int random_integer = rand()%4 + 1;
+
+  if (random_integer == 4){
+      cout<<"¡Su proximo viaje sera para Guanica!"<<endl;
+  }
+  
+  if (random_integer == 3){
+      cout<<"¡Su proximo viaje sera para Lajas!"<<endl;
+  }
+
+  if (random_integer == 2){
+      cout<<"¡Su proximo viaje sera para Cabo Rojo!"<<endl;
+  }
+
+  if (random_integer == 1){
+      cout<<"¡Su proximo viaje sera para Aguada!"<<endl; 
+  }
+  
+  return 0;
+}
