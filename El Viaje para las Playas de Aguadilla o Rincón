@@ -2,7 +2,6 @@
 #include<cstdlib>
 #include<ctime>
 #include<iostream>
-
 using namespace std;
 
 int main(){
@@ -21,8 +20,6 @@ i = 1;
 suma = 0; 
 string oferta;
 double ivu = .2;
-
-
 
 cout<<"Hola! Porfavor entre su nombre y apellido: ";cin>>nombre>>apellido; 
 cout<<"Hola, "<<nombre<<" "<<apellido<<"! ¿Vas para Aguadilla o Rincón?: ";cin>>pueblo;
